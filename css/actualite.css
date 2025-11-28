@@ -1,0 +1,224 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #f7f3ed;
+    color: #222;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+.page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #f3f7fa;
+    border-radius: 10px;
+    padding: 1.2em 2em 1.2em 1.2em;
+    margin: 2em 0 2em 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    gap: 0.5em;
+}
+.logo-header {
+    height: 56px;
+    width: auto;
+    display: block;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    padding: 4px 8px;
+}
+.header-title {
+    font-size: 2.1em;
+    font-weight: bold;
+    color: #0074d9;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin-bottom: 0.2em;
+}
+.header-date {
+    font-size: 1.1em;
+    color: #333;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 500;
+    min-width: 160px;
+    text-align: left;
+    margin-left: 0.1em;
+}
+.flux-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: stretch;
+    width: 100%;
+    margin: 0;
+    max-width: none;
+    box-sizing: border-box;
+}
+.flux-block {
+    border: 2px solid #2566a8;
+    border-radius: 8px;
+    padding: 1em;
+    width: 100%;
+    min-height: 200px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(37,102,168,0.07);
+    margin-bottom: 0;
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.flux-block ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; flex-wrap: nowrap; overflow-y: auto; }
+.flux-block li { margin-bottom: 1.2em; border-bottom: 1px solid #eee; padding-bottom: 0.8em; }
+.flux-block li:last-child { border-bottom: none; }
+.flux-block a {
+    font-weight: bold;
+    color: #0074d9;
+    text-decoration: none;
+    font-size: 1em;
+    display: block;
+    margin-bottom: 0.2em;
+}
+.flux-block a:hover { text-decoration: underline; }
+.flux-block div {
+    margin-top: 0;
+    color: #333;
+    font-size: 0.97em;
+    line-height: 1.5;
+}
+.flux-block h2 {
+    margin-top: 0;
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: bold;
+    background: #2566a8;
+    border-radius: 6px 6px 0 0;
+    padding: 0.7em 1em 0.7em 0.8em;
+    border-bottom: 2px solid #17406a;
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(37,102,168,0.08);
+}
+.flux-block h2 .flux-icon {
+    font-size: 1.2em;
+    margin-right: 0.4em;
+    display: inline-block;
+}
+@media (max-width: 900px) {
+    .page-header {
+        padding: 0.8em 1em 0.8em 0.8em;
+        margin-bottom: 1.2em;
+    }
+    .header-title {
+        font-size: 1.3em;
+    }
+    .header-date {
+        font-size: 1em;
+    }
+    .flux-block {
+        padding: 0.7em;
+        min-height: 120px;
+    }
+    .flux-block h2 {
+        font-size: 1em;
+        padding: 0.5em 0.7em 0.5em 0.6em;
+    }
+    .flux-block a {
+        font-size: 0.98em;
+    }
+    .flux-block div {
+        font-size: 0.93em;
+    }
+}
+@media (max-width: 600px) {
+    html, body {
+        padding: 0;
+        min-height: 100vh;
+        background: #f7f3ed;
+    }
+    .page-header {
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        margin-bottom: 0.7em;
+    }
+    .header-title {
+        font-size: 1em;
+    }
+    .header-date {
+        font-size: 0.9em;
+    }
+    .flux-vertical {
+        gap: 1em;
+        padding: 0 0.5em;
+    }
+    .flux-block {
+        padding: 0.4em;
+        min-height: 80px;
+        border-width: 1.5px;
+    }
+    .flux-block h2 {
+        font-size: 0.95em;
+        padding: 0.3em 0.5em 0.3em 0.4em;
+    }
+    .flux-block a {
+        font-size: 0.93em;
+    }
+    .flux-block div {
+        font-size: 0.88em;
+    }
+}
+/*
+ * actualite.css
+ * Styles spécifiques à la page actualites-madagascar.php
+ */
+
+/* Ajoutez ici vos styles personnalisés pour la page actualités */
+
+.actualites-container {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.actualites-title {
+    color: #1a4a8a;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.tribune-box {
+    background: #2360a5;
+    color: #fff;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.tribune-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.tribune-article {
+    background: #fff;
+    color: #222;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.tribune-article-title {
+    color: #2360a5;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.tribune-article-content {
+    font-size: 1rem;
+    color: #444;
+}

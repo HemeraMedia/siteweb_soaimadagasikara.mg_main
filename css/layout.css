@@ -1,0 +1,300 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', Arial, sans-serif;
+	background: #f7f3ed;
+	color: #222;
+	height: 100%;
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+.split-container {
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
+.split-left {
+	flex: 1 1 33%;
+	position: relative;
+	min-width: 320px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+	overflow: hidden;
+}
+.split-left video {
+	position: absolute;
+	top: 0; left: 0; width: 100%; height: 100%;
+	object-fit: cover;
+	z-index: 1;
+	transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+.split-left .content {
+	position: relative;
+	z-index: 2;
+	text-align: center;
+	width: 100%;
+	padding: 2em 1em;
+	border-radius: 12px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.split-left img {
+	max-width: 220px;
+	width: 80%;
+	margin-bottom: 1.5em;
+	margin-top: 0.5em;
+	display: block;
+}
+.split-left h1 {
+	font-size: 2em;
+	color: #fff;
+	text-shadow: 0 4px 24px rgba(0,0,0,0.95), 0 1px 2px rgba(0,0,0,0.85);
+	margin-bottom: 0.5em;
+	font-weight: 700;
+	letter-spacing: 1.5px;
+}
+.split-left h2 {
+	font-size: 1.1em;
+	color: #fff;
+	text-shadow: 0 2px 12px rgba(0,0,0,0.85), 0 1px 2px rgba(0,0,0,0.7);
+	margin-top: 0;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+.split-right {
+	flex: 2 1 67%;
+	background: linear-gradient(90deg, #f7f3ed 90%, #fff 100%);
+	overflow-y: auto;
+	padding: 2em 3vw;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	border-left: 6px solid #e0d2c0;
+}
+.page-header {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background: #f3f7fa;
+	border-radius: 10px;
+	padding: 1.2em 2em 1.2em 1.2em;
+	margin-bottom: 2em;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+	gap: 0.5em;
+}
+.header-title {
+	font-size: 2.1em;
+	font-weight: bold;
+	color: #0074d9;
+	letter-spacing: 1px;
+	font-family: 'Segoe UI', Arial, sans-serif;
+	margin-bottom: 0.2em;
+}
+.header-date {
+	font-size: 1.1em;
+	color: #333;
+	font-family: 'Segoe UI', Arial, sans-serif;
+	font-weight: 500;
+	min-width: 160px;
+	text-align: left;
+	margin-left: 0.1em;
+}
+.flux-vertical {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	align-items: stretch;
+	width: 100%;
+	margin: 0;
+	max-width: none;
+	box-sizing: border-box;
+}
+.flux-block {
+	border: 2px solid #2566a8;
+	border-radius: 8px;
+	padding: 1em;
+	width: 100%;
+	min-height: 200px;
+	background: #f9f9f9;
+	box-shadow: 0 2px 8px rgba(37,102,168,0.07);
+	margin-bottom: 0;
+	flex: 1 1 100%;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+.flux-block ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; flex-wrap: nowrap; overflow-y: auto; }
+.flux-block li { margin-bottom: 1.2em; border-bottom: 1px solid #eee; padding-bottom: 0.8em; }
+.flux-block li:last-child { border-bottom: none; }
+.flux-block a {
+	font-weight: bold;
+	color: #0074d9;
+	text-decoration: none;
+	font-size: 1em;
+	display: block;
+	margin-bottom: 0.2em;
+}
+.flux-block a:hover { text-decoration: underline; }
+.flux-block div {
+	margin-top: 0;
+	color: #333;
+	font-size: 0.97em;
+	line-height: 1.5;
+}
+.flux-block h2 {
+	margin-top: 0;
+	color: #fff;
+	font-size: 1.4em;
+	font-weight: bold;
+	background: #2566a8;
+	border-radius: 6px 6px 0 0;
+	padding: 0.7em 1em 0.7em 0.8em;
+	border-bottom: 2px solid #17406a;
+	display: flex;
+	align-items: center;
+	gap: 0.6em;
+	letter-spacing: 0.5px;
+	box-shadow: 0 2px 4px rgba(37,102,168,0.08);
+}
+.flux-block h2 .flux-icon {
+	font-size: 1.2em;
+	margin-right: 0.4em;
+	display: inline-block;
+}
+@media (max-width: 900px) {
+	.split-container {
+		flex-direction: column;
+		height: 100dvh;
+		min-height: 100dvh;
+		 position: relative;
+	}
+	.split-left, .split-right {
+		flex: none;
+		width: 100vw;
+		min-width: 0;
+		min-height: unset;
+		max-height: unset;
+	}
+	.split-left {
+		height: 45dvh;
+		min-height: 180px;
+		max-height: 60vw;
+		 position: fixed;
+		 top: 0;
+		 left: 0;
+		 right: 0;
+		 z-index: 10;
+	}
+	.split-right {
+		padding: 1.2em 2vw 0 2vw;
+		min-height: 0;
+		margin-top: 45dvh;
+		height: calc(100dvh - 45dvh);
+		max-height: calc(100dvh - 45dvh);
+		overflow-y: auto;
+		background: linear-gradient(90deg, #f7f3ed 90%, #fff 100%);
+	}
+	.split-left .content {
+		padding: 1.2em 0.5em;
+	}
+	.split-left img {
+		max-width: 120px;
+		width: 60vw;
+		margin-bottom: 1em;
+	}
+	.split-left h1 {
+		font-size: 1.1em;
+	}
+	.split-left h2 {
+		font-size: 0.95em;
+	}
+	.page-header {
+		padding: 0.8em 1em 0.8em 0.8em;
+		margin-bottom: 1.2em;
+	}
+	.header-title {
+		font-size: 1.3em;
+	}
+	.header-date {
+		font-size: 1em;
+	}
+	.flux-block {
+		padding: 0.7em;
+		min-height: 120px;
+	}
+	.flux-block h2 {
+		font-size: 1em;
+		padding: 0.5em 0.7em 0.5em 0.6em;
+	}
+	.flux-block a {
+		font-size: 0.98em;
+	}
+	.flux-block div {
+		font-size: 0.93em;
+	}
+}
+@media (max-width: 600px) {
+	.split-left {
+		height: clamp(120px, 32vh, 240px);
+		min-height: 120px;
+		max-height: 240px;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 10;
+	}
+	.split-right {
+		padding: 0.7em 1vw 0 1vw;
+		margin-top: clamp(120px, 32vh, 240px);
+		height: calc(100dvh - clamp(120px, 32vh, 240px));
+		max-height: calc(100dvh - clamp(120px, 32vh, 240px));
+		overflow-y: auto;
+		background: linear-gradient(90deg, #f7f3ed 90%, #fff 100%);
+	}
+	.split-left img {
+		max-width: 80px;
+		width: 40vw;
+	}
+	.split-left .content {
+		padding: 0.7em 0.2em;
+	}
+	.split-left h1 {
+		font-size: 0.95em;
+	}
+	.split-left h2 {
+		font-size: 0.8em;
+	}
+	.page-header {
+		padding: 0.5em 0.5em 0.5em 0.5em;
+		margin-bottom: 0.7em;
+	}
+	.header-title {
+		font-size: 1em;
+	}
+	.header-date {
+		font-size: 0.9em;
+	}
+	.flux-block {
+		padding: 0.4em;
+		min-height: 80px;
+	}
+	.flux-block h2 {
+		font-size: 0.85em;
+		padding: 0.3em 0.5em 0.3em 0.4em;
+	}
+	.flux-block a {
+		font-size: 0.93em;
+	}
+	.flux-block div {
+		font-size: 0.88em;
+	}
+}
+/* layout.css : styles principaux de la structure (split-container, split-left, split-right, etc.) */

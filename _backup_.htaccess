@@ -1,0 +1,9 @@
+RewriteEngine on
+
+#Ajout www
+RewriteCond %{HTTP_HOST} ^soaimadagasikara.org$
+RewriteRule ^(.*) http://www.soaimadagasikara.org/$1  [QSA,L,R=301]
+
+#Redirection vers https
+RewriteCond %{HTTPS} !=on
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]

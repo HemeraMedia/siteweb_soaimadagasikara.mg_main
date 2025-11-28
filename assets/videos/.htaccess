@@ -1,0 +1,8 @@
+# Désactiver l’indexation des fichiers
+Options -Indexes
+
+# Protéger les fichiers sensibles
+<FilesMatch "\.(php|ini|sh|bak|inc)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>

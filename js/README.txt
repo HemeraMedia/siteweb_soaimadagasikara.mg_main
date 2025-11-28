@@ -1,0 +1,1 @@
+Placez ici tous les fichiers JavaScript du site. Exemple : main.js, actualites.js, etc.

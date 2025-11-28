@@ -1,0 +1,60 @@
+body {
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+}
+
+div {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 2vw 0 4vw 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.responsive-logo {
+	max-width: 70vw;
+	height: auto;
+	max-height: 30vh;
+	margin-bottom: 2vw;
+}
+
+h1, h2 {
+	word-break: break-word;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	text-align: center !important;
+	display: block;
+}
+
+@media (max-width: 600px) {
+	body {
+		padding: 0;
+		min-height: 100vh;
+	}
+	div {
+		max-width: 98vw;
+		padding: 4vw 0 6vw 0;
+	}
+	.responsive-logo {
+		max-width: 60vw;
+		max-height: 18vh;
+	}
+	h1 {
+		font-size: 1em;
+		margin-top: 2vw;
+		margin-bottom: 2vw;
+	}
+	h2 {
+		font-size: 0.9em;
+		margin-top: 1vw;
+		margin-bottom: 1vw;
+	}
+}
+/* Déplacé depuis la racine */

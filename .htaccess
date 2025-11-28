@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Redirection permanente vers https://www.soaimadagasikara.mg
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.soaimadagasikara\.mg$ [NC]
+RewriteRule ^(.*)$ https://www.soaimadagasikara.mg/$1 [R=301,L]
+
+# Joomla SEF - Supprimer index.php des URLs
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]

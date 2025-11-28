@@ -1,0 +1,76 @@
+/* Style moderne pour page partagée */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #f4f7fa;
+  color: #222;
+}
+.split-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.split-left {
+  flex: 1 1 33%;
+  background: #222 url('assets/videos/sainamalagasy.mp4') center/cover no-repeat;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  position: relative;
+  z-index: 1;
+}
+.split-left .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 2;
+}
+.split-left .content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+.split-left h1 {
+  font-size: 2.5em;
+  color: #fff;
+  text-shadow: 2px 4px 12px rgba(0,0,0,0.7);
+  margin-bottom: 0.5em;
+}
+.split-left h2 {
+  font-size: 1.2em;
+  color: #fff;
+  text-shadow: 2px 4px 12px rgba(0,0,0,0.7);
+  margin-top: 0;
+}
+.split-left img {
+  max-width: 220px;
+  margin-bottom: 1.5em;
+}
+.split-right {
+  flex: 2 1 67%;
+  background: #fff;
+  overflow-y: auto;
+  padding: 2em 3vw;
+  box-sizing: border-box;
+}
+@media (max-width: 900px) {
+  .split-container {
+    flex-direction: column;
+  }
+  .split-left, .split-right {
+    flex: none;
+    width: 100vw;
+    min-width: 0;
+    min-height: 40vh;
+    max-height: 60vh;
+  }
+  .split-right {
+    min-height: 40vh;
+    max-height: 60vh;
+  }
+}
