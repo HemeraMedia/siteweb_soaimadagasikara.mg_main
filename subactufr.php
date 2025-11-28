@@ -1,26 +1,18 @@
 <header class="page-header">
-  <span class="header-title">Actualités de Madagascar</span>
+  <span class="header-title">Presse internationale francophone</span>
   <span class="header-date" id="header-date"></span>
 </header>
 <div class="flux-vertical">
-  <div class="flux-block" id="flux-tribune">
-    <h2><span class="flux-icon">📰</span>Madagascar Tribune</h2>
+  <div class="flux-block" id="flux-rfi">
+    <h2><span class="flux-icon">📰</span>RFI Madagascar</h2>
     <div class="json-feed">Chargement…</div>
   </div>
-  <div class="flux-block" id="flux-lgdi">
-    <h2><span class="flux-icon">📰</span>La Gazette de la Grande Ile</h2>
+  <div class="flux-block" id="flux-allafrica">
+    <h2><span class="flux-icon">📰</span>AllAfrica Madagascar</h2>
     <div class="json-feed">Chargement…</div>
   </div>
-  <div class="flux-block" id="flux-midi">
-    <h2><span class="flux-icon">📰</span>Midi Madagasikara</h2>
-    <div class="json-feed">Chargement…</div>
-  </div>
-  <div class="flux-block" id="flux-lexpress">
-    <h2><span class="flux-icon">📰</span>L'Express de Madagascar</h2>
-    <div class="json-feed">Chargement…</div>
-  </div>
-  <div class="flux-block" id="flux-newsmada">
-    <h2><span class="flux-icon">📰</span>NewsMada</h2>
+  <div class="flux-block" id="flux-googlenewsfr">
+    <h2><span class="flux-icon">📰</span>Google News (FR)</h2>
     <div class="json-feed">Chargement…</div>
   </div>
 </div>
@@ -35,24 +27,16 @@
   updateHeaderDate();
   const fluxList = [
     {
-      id: 'flux-tribune',
-      url: 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.madagascar-tribune.com%2Fspip.php%3Fpage%3Dbackend'
+      id: 'flux-rfi',
+      url: 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.rfi.fr%2Ffr%2Ftag%2Fmadagascar%2Frss'
     },
     {
-      id: 'flux-lgdi',
-      url: 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Flgdi-madagascar.com%2Ffeed%2F'
+      id: 'flux-allafrica',
+      url: 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fallafrica.com%2Ffeeds%2Fcountry%2Fmadagascar%2Fheadlines.xml'
     },
     {
-      id: 'flux-midi',
-      url: 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmidi-madagasikara.mg%2Ffeed%2F'
-    },
-    {
-      id: 'flux-lexpress',
-      url: 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.lexpress.mg%2Ffeeds%2Fposts%2Fdefault'
-    },
-    {
-      id: 'flux-newsmada',
-      url: 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnewsmada.com%2Ffeed%2F'
+      id: 'flux-googlenewsfr',
+      url: 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnews.google.com%2Frss%2Fsearch%3Fq%3Dmadagascar%26hl%3Dfr%26gl%3DFR%26ceid%3DFR%3Afr'
     }
   ];
   fluxList.forEach(flux => {
@@ -64,9 +48,7 @@
           let items = data.items.slice(0, 5);
           items.forEach(item => {
             let description = item.description || '';
-            // Supprimer toutes les balises HTML (images, liens, titres, etc.)
             description = description.replace(/<[^>]+>/g, '');
-            // Limiter la longueur de la description (optionnel, ex: 350 caractères)
             let descShort = description.length > 350 ? description.substring(0, 347) + '…' : description;
             html += `<li>\n<a href="${item.link}" target="_blank">${item.title}</a>\n<div>${descShort}</div>\n</li>`;
           });
@@ -80,6 +62,5 @@
         document.querySelector(`#${flux.id} .json-feed`).innerHTML = "Erreur de chargement du flux.";
       });
   });
-
 </script>
 <?php include 'footer.php'; ?>
