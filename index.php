@@ -2,7 +2,7 @@
 $page_title = 'Association Soa i Madagasikara - Diaspora et Développement Madagascar';
 $page_description = "Association Soa i Madagasikara : actions de la diaspora pour le développement économique, social, culturel et sportif à Madagascar. Actualités, projets, solidarité, engagement.";
 $page_keywords = "association Madagascar, diaspora, malagasy, Soa i Madagasikara, développement, solidarité, projets, actualités, économie, culture, sport, entraide, ONG, news Madagascar";
-$page_canonical = "https://soaimadagasikara.mg/index.html";
+$page_canonical = "https://soaimadagasikara.mg/index.php";
 $og_title = $page_title;
 $og_description = $page_description;
 $og_url = $page_canonical;

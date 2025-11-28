@@ -2,7 +2,7 @@
 $page_title = 'Actualités de Madagascar - Soa i Madagasikara';
 $page_description = "Retrouvez toute l’actualité de Madagascar en temps réel : informations, journaux, presse, société, économie, politique, diaspora. Sélection par Soa i Madagasikara.";
 $page_keywords = "actualités Madagascar, presse Madagascar, journaux malgaches, Soa i Madagasikara, diaspora, informations Madagascar, société, économie, politique, news, Malagasy, Tribune, Midi, L'Express, NewsMada, LGDI";
-$page_canonical = "https://soaimadagasikara.mg/actualites-madagascar.html";
+$page_canonical = "https://soaimadagasikara.mg/actualites-madagascar.php";
 $og_title = $page_title;
 $og_description = $page_description;
 $og_url = $page_canonical;
